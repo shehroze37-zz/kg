@@ -121,7 +121,7 @@ def load_data(data_folder, vocab_counter,is_train):
         tokens = text.split()
         tokens = clean_data(tokens)
 
-        vocab_counter.update(tokens)
+        #vocab_counter.update(tokens)
 
         tokens = [w for w in tokens if w in vocab_counter]
         line =  ' '.join(tokens)
