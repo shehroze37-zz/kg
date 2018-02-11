@@ -239,8 +239,8 @@ def start_threads(args):
         print(Xtrain.shape)
          
         # load all test reviews
-        positive_lines = process_docs('txt_sentoken/pos', vocab, False)
-        negative_lines = process_docs('txt_sentoken/neg', vocab, False)
+        positive_lines = load_data('txt_sentoken/pos', vocab, False)
+        negative_lines = load_data('txt_sentoken/neg', vocab, False)
         docs = negative_lines + positive_lines
         # encode training data set
         Xtest = tokenizer.texts_to_matrix(docs, mode='freq')
