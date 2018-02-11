@@ -263,6 +263,8 @@ def start_threads(args):
         loss, acc = model.evaluate(Xtest, ytest, verbose=0)
         print('Test Accuracy: %f' % (acc*100))
 
+
+
     else:
 
         print("Loading and saving vocab.txt")
