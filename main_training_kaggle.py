@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from numpy import array
 
 import random
 
@@ -34,11 +35,19 @@ import os.path
 from keras.preprocessing.text import Tokenizer
 
 
-'''
+
 import concurrent.futures
 from keras.wrappers.scikit_learn import KerasRegressor
 from sklearn.metrics import mean_squared_error
 from main_training_prediction import get_available_gpus
+
+from keras.preprocessing.text import Tokenizer
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Dropout
+from pandas import DataFrame
+from matplotlib import pyplot
+
 #import tensorflow as tf
 
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/preprocessing")
@@ -46,7 +55,6 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/algorithms")
 
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #Hide messy TensorFlow warnings
-'''
 
 
 seed = 123
