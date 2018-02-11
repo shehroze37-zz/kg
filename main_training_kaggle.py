@@ -265,7 +265,7 @@ def start_threads(args):
         # compile network
         model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
         # fit network
-        model.fit(Xtrain, ytrain, epochs=50, verbose=2)
+        model.fit(Xtrain, ytrain, epochs=50, verbose=1)
         # evaluate
         loss, acc = model.evaluate(Xtest, ytest, verbose=0)
         print('Test Accuracy: %f' % (acc*100))
