@@ -190,7 +190,7 @@ def train(args):
 
 def evaluate_mode(Xtrain, ytrain, Xtest, ytest):
     scores = list()
-    n_repeats = 30
+    n_repeats = 1
     n_words = Xtest.shape[1]
     for i in range(n_repeats):
         # define network
