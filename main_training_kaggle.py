@@ -39,7 +39,6 @@ from keras.preprocessing.text import Tokenizer
 import concurrent.futures
 from keras.wrappers.scikit_learn import KerasRegressor
 from sklearn.metrics import mean_squared_error
-from main_training_prediction import get_available_gpus
 
 from keras.preprocessing.text import Tokenizer
 from keras.models import Sequential
