@@ -211,21 +211,21 @@ def start_threads(args):
 
         output = training_algo.train_random_forest_2()'''
 
-    if os.path.isfile('../../kaggle/movie-review-dataset/vocab.txt') == True:
+    if os.path.isfile('movie-review-dataset/vocab.txt') == True:
 
         print("Loading from vocab.txt")
 
-        vocab_filename = '../../kaggle/movie-review-dataset/vocab.txt'
+        vocab_filename = 'movie-review-dataset/vocab.txt'
         vocab = load_doc(vocab_filename)
         vocab = vocab.split()
         vocab = set(vocab)
 
         #####
 
-        negative_lines = load_data('../../kaggle/movie-review-dataset/txt_sentoken/neg/', vocab, True)
+        negative_lines = load_data('movie-review-dataset/txt_sentoken/neg/', vocab, True)
         save_list(negative_lines, 'negative.txt')
 
-        positive_lines = load_data('../../kaggle/movie-review-dataset/txt_sentoken/pos/', vocab, True)
+        positive_lines = load_data('movie-review-dataset/txt_sentoken/pos/', vocab, True)
         save_list(positive_lines, 'positive.txt')
 
         # create the tokenizer
@@ -252,13 +252,13 @@ def start_threads(args):
 
         vocab = Counter()
         load_data(args.data_folder, vocab, True)
-        load_data('../../kaggle/movie-review-dataset/txt_sentoken/pos/',vocab, True)
+        load_data('movie-review-dataset/txt_sentoken/pos/',vocab, True)
 
         min_occurane = 5
         tokens = [k for k,c in vocab.items() if c >= min_occurane]
         print(len(tokens))
 
-        save_list(tokens, '../../kaggle/movie-review-dataset/vocab.txt')
+        save_list(tokens, 'movie-review-dataset/vocab.txt')
 
         
 
